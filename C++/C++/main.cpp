@@ -17,15 +17,11 @@ const int COLUMN_WIDTH = 20;
 
 void PrintTableHeader() {
     for (int i = 0;i < NUM_COLUMNS - 1;i++) {
-        for (int j = 0; j < COLUMN_WIDTH; ++j) {
-            cout << '-';
-        }
-        cout << "-+-";
+        cout  << setfill('-') << setw(COLUMN_WIDTH) << "" << "-+-";
     }
-    for (int j = 0; j < COLUMN_WIDTH; ++j) {
-        cout << '-';
-    }
-    cout << endl;
+    cout << setw(COLUMN_WIDTH) << "";
+    // undo setfill
+    cout << setfill(' ') << endl;
 }
 
 void  PrintTableBody() {
@@ -47,6 +43,7 @@ void  PrintTableBody() {
 
 int main(int argc, const char * argv[]) {
     // insert code here...
+    
     PrintTableHeader();
     PrintTableBody();
     return 0;
