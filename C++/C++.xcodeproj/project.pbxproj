@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		723BA7662B8EDC9C00CE1D13 /* table-data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "table-data.txt"; sourceTree = "<group>"; };
+		723BA7722B90334500CE1D13 /* world-capitals.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "world-capitals.txt"; sourceTree = "<group>"; };
 		72D7F1662B8C3FDB004AE81A /* C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D7F1692B8C3FDB004AE81A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +61,7 @@
 			children = (
 				72D7F1692B8C3FDB004AE81A /* main.cpp */,
 				723BA7662B8EDC9C00CE1D13 /* table-data.txt */,
+				723BA7722B90334500CE1D13 /* world-capitals.txt */,
 			);
 			path = "C++";
 			sourceTree = "<group>";
