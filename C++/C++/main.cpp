@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <sstream>
 using namespace std;
 
 //const int NUM_LENS = 4;
@@ -59,6 +60,7 @@ void  PrintTableBody() {
     }
 }
 
+
 void TestGetLine() {
 //    int dummyInt;
     string dummyString;
@@ -75,13 +77,55 @@ void CinErr() {
     }
 }
 
+void UseSStream() {
+//    stringstream message;
+//    message << "Hello the number is " << 99 << endl;
+//    cout << message.str() << endl;
+    
+    stringstream myConverter;
+     int myInt;
+     string myString;
+     double myDouble;
+     myConverter << "137 Hello 2.71828"; // Insert string data
+     myConverter >> myInt >> myString >> myDouble; // Extract mixed data
+    cout << myInt << myString << myDouble << endl;
+}
+
+string GetLine() {
+     string result;
+     getline(cin, result);
+     return result;
+}
+
+
+int GetInteger() {
+    int integer;
+    while(true) {
+        stringstream converter;
+        converter << GetLine();
+        
+        if(converter >> integer) {
+            char remaining;
+            if (converter >> remaining) {
+                cout << "Unexpected character:" << remaining << endl;
+            }
+            return integer;
+        } else {
+            cout << "Please enter an integer"  << endl;
+        }
+        cout << "Retry :" << endl;
+    }
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    PrintWorldCaptial();
+//    PrintWorldCaptial();
 //    TestGetLine();
 //    PrintTableHeader();
 //    PrintTableBody();
 //    CinErr();
+//    UseSStream();
+    GetInteger();
     return 0;
 }
 
