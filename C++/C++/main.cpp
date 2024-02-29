@@ -117,6 +117,53 @@ int GetInteger() {
     }
 }
 
+bool GetReal() {
+    int    integer;
+    stringstream converter;
+    converter << GetLine();
+    
+    if(converter >> integer) {
+        char remaining;
+        if (converter >> remaining) {
+            return false;
+        }
+        return true;
+    }
+    return false;
+}
+
+bool GetBoolean() {
+    string str;
+    stringstream converter;
+    converter << GetLine();
+    
+    if(converter >> str && str == "true") {
+        return true;
+    }
+    return false;
+}
+
+
+void TestOfstream() {
+    ofstream output("/Users/qt/Documents/C++/C++/C++/C++/write.txt");
+    if(!output.is_open()) {
+        PrintOpenFileErr();
+    }
+    output << "Text to write";
+    output.close();
+    cout << "write done " << endl;
+}
+
+string ConvertIntToStringByStringstream(int integer) {
+    stringstream converter;
+    string result;
+    converter << integer;
+    converter >> result;
+    return result;
+}
+
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
 //    PrintWorldCaptial();
@@ -125,7 +172,12 @@ int main(int argc, const char * argv[]) {
 //    PrintTableBody();
 //    CinErr();
 //    UseSStream();
-    GetInteger();
+//    GetInteger();
+//    TestOfstream();
+//    cout << "This is a string now:" <<ConvertIntToStringByStringstream(1111) << endl;
+//    cout << boolalpha << GetReal() << endl;
+//    cout << boolalpha << GetBoolean() << endl;
+
     return 0;
 }
 

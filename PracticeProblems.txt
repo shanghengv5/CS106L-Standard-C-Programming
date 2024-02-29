@@ -1,0 +1,15 @@
+1. How do you write data to a file in C++?
+checkout TestOfstream()
+2. What does the setw manipulator do? What does the setfill manipulator do? How do you use
+them?
+setw give you a width of empty string, setfill can change the width for fill
+3. What is stream failure? How do you check for it?
+return 1 or else
+4. What is a stringstream?
+It can accept all types message include whitespace
+5. Using a stringstream, write a function that converts an int into a string.
+checkout ConvertIntToStringByStringstream()
+6. Modify the code for GetInteger to create a function GetReal that reads a real number from the user. How much did you need to modify to make this code work?
+checkout GetReal()
+7. Using the code for GetInteger and the boolalpha stream manipulator, write a function GetBoolean that waits for the user to enter “true” or “false” and returns the corresponding boolean value
+checkout GetBoolean()
