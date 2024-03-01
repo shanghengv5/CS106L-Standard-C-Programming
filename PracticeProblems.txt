@@ -13,3 +13,25 @@ checkout ConvertIntToStringByStringstream()
 checkout GetReal()
 7. Using the code for GetInteger and the boolalpha stream manipulator, write a function GetBoolean that waits for the user to enter “true” or “false” and returns the corresponding boolean value
 checkout GetBoolean()
+
+8. In common usage, numbers are written in decimal or base 10. This means that a string of digits is interpreted as a sum of multiples of powers of ten. For example, the number 137  is 1·100 + 3·10 + 7·1, which is the same as  1·10^2 + 3·10^1 + 7·10^0. However, it is possible to write numbers in other bases as well. For example, octal, or base 8, encodes numbers as sums of multiples of powers of eight. For example, 137 in octal would be 1·8^2 + 3·8^1 + 7·8^0 = 64 + 24 + 7 = 95 in decimal. * Similarly, binary, or base 2, uses powers of two. When working in a particular base, we only use digits from 0 up to that base. Thus in base 10 we use the digits zero through nine, while in base five the only digits would be 0, 1, 2, 3, and 4. This means that 57 is not a valid base-five number and 93 is not a valid octal number. When working in bases numbered higher than ten, it is customary to use letters from the beginning of the alphabet as digits. For example, in hexadecimal, or base 16, one counts 0, 1, 2, ..., 9, A, B, C, D, E, F, 10. This means that 3D45E is a valid hexadecimal number, as is DEADBEEF or DEFACED. Write a function HasHexLetters that accepts an int and returns whether or not that integer's hexadecimal representation contains letters. (Hint: you'll need to use the hex and dec stream manipulators in conjunction with a stringstream. Try to solve this problem without brute-forcing it: leverage off the streams library instead of using loops.) 
+checkout HasHexLetters()
+
+9. Although the console does not naturally lend itself to graphics programming, it is possible to draw rudimentary approximations of polygons by printing out multiple copies of a character at the proper location. For example, we can draw a triangle by drawing a single character on one line,then three on the next, five on the line after that, etc. For example: 
+    #
+    ###
+    #####
+    #######
+    #########
+Using the setw and setfill stream manipulators, write a function DrawTriangle that takes in
+an int corresponding to the height of the triangle and a char representing a character to print,
+then draws a triangle of the specified height using that character. The triangle should be aligned so
+that the bottom row starts at the beginning of its line.
+checkout DrawTriangle()
+
+10.Write a function OpenFile that accepts as input an ifstream by reference and prompts the user
+for the name of a file. If the file can be found, OpenFile should return with the ifstream opened
+to read that file. Otherwise, OpenFile should print an error message and reprompt the user.
+(Hint: If you try to open a nonexistent file with an ifstream, the stream goes into a fail state and you
+will need to use .clear() to restore it before trying again).
+checkout OpenFileByPrompt()

@@ -162,6 +162,53 @@ string ConvertIntToStringByStringstream(int integer) {
     return result;
 }
 
+bool HasHexLetters(int num) {
+    stringstream ss;
+    ss << hex << num;
+    string hexString = ss.str();
+
+    for (char c : hexString) {
+        if (isalpha(c)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void DrawTriangle(int height) {
+    if (height < 1) {
+        cerr << "The triangle must higher than 1" << endl;
+        return;
+    }
+    int large = height * 2+1;
+
+    for (int i = 0;i < height; i++) {
+        cout << setfill(' ') << setw(large-i) << "";
+        cout << setfill('#') << setw(i*2+1) << "" << endl;
+    }
+}
+
+void OpenFileByPrompt() {
+    ifstream input;
+    while (true) {
+        stringstream ss;
+        ss << GetLine();
+        string fileName;
+        ss >> fileName;
+        input.open(fileName);
+        if(!input.is_open()) {
+            PrintOpenFileErr();
+            cerr << "filename is " << fileName << endl;
+            input.clear();
+            continue;
+        }
+        
+        cout << "open file success " << fileName << endl;
+        break;
+    }
+    
+}
 
 
 int main(int argc, const char * argv[]) {
@@ -177,7 +224,11 @@ int main(int argc, const char * argv[]) {
 //    cout << "This is a string now:" <<ConvertIntToStringByStringstream(1111) << endl;
 //    cout << boolalpha << GetReal() << endl;
 //    cout << boolalpha << GetBoolean() << endl;
-
+//    int num2 = 0xABC;
+//    cout << "Number 0x3D45E has hex letters: ";
+//    cout << boolalpha << HasHexLetters(num2) << endl;
+//    DrawTriangle(3);
+    OpenFileByPrompt();
     return 0;
 }
 
