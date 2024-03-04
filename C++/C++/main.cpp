@@ -9,6 +9,7 @@
 #include <fstream>
 #include <iomanip>
 #include <sstream>
+#include "strutils.hpp"
 using namespace std;
 
 //const int NUM_LENS = 4;
@@ -191,16 +192,17 @@ void DrawTriangle(int height) {
 
 void OpenFileByPrompt() {
     ifstream input;
+    stringstream ss;
+    string fileName;
     while (true) {
-        stringstream ss;
         ss << GetLine();
-        string fileName;
         ss >> fileName;
         input.open(fileName);
         if(!input.is_open()) {
             PrintOpenFileErr();
             cerr << "filename is " << fileName << endl;
             input.clear();
+            ss.clear();
             continue;
         }
         
@@ -228,7 +230,8 @@ int main(int argc, const char * argv[]) {
 //    cout << "Number 0x3D45E has hex letters: ";
 //    cout << boolalpha << HasHexLetters(num2) << endl;
 //    DrawTriangle(3);
-    OpenFileByPrompt();
+//    OpenFileByPrompt();
+    cout << ConvertToLowerCase("THIS IS A STRING") << endl;
     return 0;
 }
 
