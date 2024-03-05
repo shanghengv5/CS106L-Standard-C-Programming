@@ -8,7 +8,8 @@
 #ifndef strutils_hpp
 #define strutils_hpp
 
-#include <string>;
+#include <string>
+
 using namespace std;
 
 string ConvertToUpperCase(string input);
