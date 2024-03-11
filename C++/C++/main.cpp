@@ -7,7 +7,13 @@
 
 #include "chapter1-3.hpp"
 #include "strutils.hpp"
+#include "x-macro.hpp"
+
 using namespace std;
+
+
+
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -26,8 +32,11 @@ int main(int argc, const char * argv[]) {
 //    cout << "Number 0x3D45E has hex letters: ";
 //    cout << boolalpha << HasHexLetters(num2) << endl;
 //    DrawTriangle(3);
-    OpenFileByPrompt();
+//    OpenFileByPrompt();
 //    cout << ConvertToLowerCase("THIS IS A STRING") << endl;
+
+//    cout << "Color:" << ColorToString(Yellow) << endl;
+
     return 0;
 }
 
