@@ -8,11 +8,13 @@
 #include "chapter1-3.hpp"
 #include "strutils.hpp"
 #include "x-macro.hpp"
-
+#include "units.h"
 using namespace std;
 
 
-
+bool IsPositive(int x) {
+    return x < 0;
+}
 
 
 int main(int argc, const char * argv[]) {
@@ -34,9 +36,11 @@ int main(int argc, const char * argv[]) {
 //    DrawTriangle(3);
 //    OpenFileByPrompt();
 //    cout << ConvertToLowerCase("THIS IS A STRING") << endl;
-
-//    cout << "Color:" << ColorToString(Yellow) << endl;
-
+    DEFINE_UNIT(1, 2, 3, 4);
+//    cout << "Color:" << ColorToString(eColor_Green) << endl;
+//    cout << cName(Red) << endl;
+//    cout << ColorToString(StringToColor("TT"))  << endl;
+//    cout << eColor_Green << endl;
     return 0;
 }
 

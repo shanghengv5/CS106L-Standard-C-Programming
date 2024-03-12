@@ -8,5 +8,6 @@
 #ifndef units_h
 #define units_h
 
+#define DEFINE_UNIT(name, meter, suffix, system) cout << setfill('-') << setw(20) << ""
 
 #endif /* units_h */

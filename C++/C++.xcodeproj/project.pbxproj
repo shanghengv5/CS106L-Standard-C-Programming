@@ -35,6 +35,7 @@
 		72BED22E2B9EE1EC0094B658 /* x-macro.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "x-macro.cpp"; sourceTree = "<group>"; };
 		72BED22F2B9EE1EC0094B658 /* x-macro.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "x-macro.hpp"; sourceTree = "<group>"; };
 		72BED2312B9EE2580094B658 /* color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		72BED2322BA054F20094B658 /* units.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = units.h; sourceTree = "<group>"; };
 		72D7F1662B8C3FDB004AE81A /* C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D7F1692B8C3FDB004AE81A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +80,7 @@
 				72BED2282B95D5110094B658 /* strutils.cpp */,
 				72BED2292B95D5110094B658 /* strutils.hpp */,
 				72BED2312B9EE2580094B658 /* color.h */,
+				72BED2322BA054F20094B658 /* units.h */,
 			);
 			path = "C++";
 			sourceTree = "<group>";

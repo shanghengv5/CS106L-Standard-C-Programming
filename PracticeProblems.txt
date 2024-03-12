@@ -1,3 +1,5 @@
+# chapter1-3
+
 1. How do you write data to a file in C++?
 checkout TestOfstream()
 2. What does the setw manipulator do? What does the setfill manipulator do? How do you use
@@ -35,3 +37,92 @@ to read that file. Otherwise, OpenFile should print an error message and repromp
 (Hint: If you try to open a nonexistent file with an ifstream, the stream goes into a fail state and you
 will need to use .clear() to restore it before trying again).
 checkout OpenFileByPrompt()
+
+# chapter4
+
+1.diffrences between #define and const
+const compiler in running, #define work on preprocesser
+const can deal with arithmetic operator, #define need to use parentheses to avoid mistake
+const treat =,int, as a c++ struct, but #define treat like a text
+
+2.use #define to help cross platform
+#if #defined(_WIN32) 
+    err << "not defined WIN32";
+#endif
+
+3.write a Max function,and explained why it doesnt have the same problem in earlier chapter
+int function Max(int a, int b) {
+    return a > b ? a : b;
+}
+
+because the #define treat the rest part as text,not a arithmetic logic operator
+
+4.Give advantage of macro Max
+
+It can process many types(int,float,string),it run in preprocess,more efficiency
+
+5.Explain the C++ codes illegal part
+bool IsPositive(int x) {
+    return x < 0;
+}
+
+#if IsPositive(MY_CONSTANT)
+    #define result true
+#else
+    #define result false
+#endif
+
+The macro run on preprocess, is more earlier than function which run on compiler time
+
+6.Compiler rarely  inline recursive function,why
+recursive need stack to store variables
+
+7.Most of STL function are inlined,explain why
+It just search and replace to c++ code,inline this function is helpful.Unnecessary to build on compiler
+
+8.Add a nonexist color,do you actually need to change color.h file?
+yes, add is best way
+
+9.write function StringToColor,if doesnt exist color return NOT_A_COLOR
+
+Color StringToColor(string s) {
+    #define DEFINE_COLOR(color, opposite) if (ColorToString(color) == s) { return color;}
+    #include "color.h"
+    #undef DEFINE_COLOR
+    return NOT_A_COLOR;
+}
+
+10.. Suppose that you want to make sure that the enumerated values you've made for Color do not
+conflict with other enumerated types that might be introduced into your program. Modify the
+earlier definition of DEFINE_COLOR used to define enum Color so that all of the colors are
+prefaced with the identifier eColor_. For example, the old value Red should change to
+eColor_Red, the old Blue would be eColor_Blue, etc. Do not change the contents of color.h.
+(Hint: Use one of the preprocessor string-manipulation operators) ♦
+
+#define cName(color) eColor_##color
+enum Color {
+    #define DEFINE_COLOR(color, opposite) cName(color),
+    #include "color.h"
+    #undef DEFINE_COLOR
+};
+
+
+11. The #error directive causes a compile-time error if the preprocessor encounters it. This may
+sound strange at first, but is an excellent way for detecting problems during preprocessing that
+might snowball into larger problems later in the code. For example, if code uses compiler-specific
+features (such as the OpenMP library), it might add a check to see that a compiler-specific
+#define is in place, using #error to report an error if it isn't. The syntax for #error is #error
+message, where message is a message to the user explaining the problem. Modify color.h so
+that if a caller #includes the file without first #define-ing the DEFINE_COLOR macro, the
+preprocessor reports an error containing message how to use this file
+
+#ifndef COLOR_H
+#error not define
+#endif
+
+12.Unit Challenge
+
+pass
+
+
+
