@@ -9,6 +9,7 @@
 #include "strutils.hpp"
 #include "x-macro.hpp"
 #include "units.h"
+#include "chapter5.hpp"
 using namespace std;
 
 
@@ -36,11 +37,12 @@ int main(int argc, const char * argv[]) {
 //    DrawTriangle(3);
 //    OpenFileByPrompt();
 //    cout << ConvertToLowerCase("THIS IS A STRING") << endl;
-    DEFINE_UNIT(1, 2, 3, 4);
+//    DEFINE_UNIT(1, 2, 3, 4);
 //    cout << "Color:" << ColorToString(eColor_Green) << endl;
 //    cout << cName(Red) << endl;
 //    cout << ColorToString(StringToColor("TT"))  << endl;
 //    cout << eColor_Green << endl;
+    PrintVectors();
     return 0;
 }
 
