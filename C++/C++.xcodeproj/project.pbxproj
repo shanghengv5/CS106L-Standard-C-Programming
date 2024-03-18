@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72BB553D2BA1B3A000F5EAAA /* chapter5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BB553B2BA1B3A000F5EAAA /* chapter5.cpp */; };
+		72BB55402BA8403100F5EAAA /* snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BB553E2BA8403100F5EAAA /* snake.cpp */; };
 		72BED22A2B95D5110094B658 /* strutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BED2282B95D5110094B658 /* strutils.cpp */; };
 		72BED22D2B96EB210094B658 /* chapter1-3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BED22B2B96EB210094B658 /* chapter1-3.cpp */; };
 		72BED2302B9EE1EC0094B658 /* x-macro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BED22E2B9EE1EC0094B658 /* x-macro.cpp */; };
@@ -31,6 +32,9 @@
 		723BA7722B90334500CE1D13 /* world-capitals.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "world-capitals.txt"; sourceTree = "<group>"; };
 		72BB553B2BA1B3A000F5EAAA /* chapter5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chapter5.cpp; sourceTree = "<group>"; };
 		72BB553C2BA1B3A000F5EAAA /* chapter5.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chapter5.hpp; sourceTree = "<group>"; };
+		72BB553E2BA8403100F5EAAA /* snake.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = snake.cpp; sourceTree = "<group>"; };
+		72BB553F2BA8403100F5EAAA /* snake.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = snake.hpp; sourceTree = "<group>"; };
+		72BB55412BA8477500F5EAAA /* level.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level.txt; sourceTree = "<group>"; };
 		72BED2282B95D5110094B658 /* strutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = strutils.cpp; sourceTree = "<group>"; };
 		72BED2292B95D5110094B658 /* strutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = strutils.hpp; sourceTree = "<group>"; };
 		72BED22B2B96EB210094B658 /* chapter1-3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "chapter1-3.cpp"; sourceTree = "<group>"; };
@@ -86,6 +90,9 @@
 				72BED2322BA054F20094B658 /* units.h */,
 				72BB553B2BA1B3A000F5EAAA /* chapter5.cpp */,
 				72BB553C2BA1B3A000F5EAAA /* chapter5.hpp */,
+				72BB553E2BA8403100F5EAAA /* snake.cpp */,
+				72BB553F2BA8403100F5EAAA /* snake.hpp */,
+				72BB55412BA8477500F5EAAA /* level.txt */,
 			);
 			path = "C++";
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 				72BED22A2B95D5110094B658 /* strutils.cpp in Sources */,
 				72BB553D2BA1B3A000F5EAAA /* chapter5.cpp in Sources */,
 				72BED22D2B96EB210094B658 /* chapter1-3.cpp in Sources */,
+				72BB55402BA8403100F5EAAA /* snake.cpp in Sources */,
 				72BED2302B9EE1EC0094B658 /* x-macro.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
