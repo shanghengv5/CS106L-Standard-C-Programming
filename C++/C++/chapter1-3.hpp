@@ -12,8 +12,11 @@
 #include <fstream>
 #include <iomanip>
 #include <sstream>
+#include "helper.hpp"
 using namespace std;
 
 void PrintOpenFileErr();
 void OpenFileByPrompt();
+string GetLine();
+int GetInteger();
 #endif /* chapter1_3_hpp */

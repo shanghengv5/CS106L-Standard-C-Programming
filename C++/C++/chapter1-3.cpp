@@ -87,31 +87,6 @@ void UseSStream() {
     cout << myInt << myString << myDouble << endl;
 }
 
-string GetLine() {
-     string result;
-     getline(cin, result);
-     return result;
-}
-
-
-int GetInteger() {
-    int integer;
-    while(true) {
-        stringstream converter;
-        converter << GetLine();
-        
-        if(converter >> integer) {
-            char remaining;
-            if (converter >> remaining) {
-                cout << "Unexpected character:" << remaining << endl;
-            }
-            return integer;
-        } else {
-            cout << "Please enter an integer"  << endl;
-        }
-        cout << "Retry :" << endl;
-    }
-}
 
 bool GetReal() {
     int    integer;

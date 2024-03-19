@@ -6,3 +6,41 @@
 //
 
 #include "helper.hpp"
+
+void OpenUserFile(ifstream& input) {
+     while(true) {
+         cout << "Enter filename: ";
+         string filename = GetLine();
+
+         input.open(filename.c_str()); // See Chapter 3 for .c_str().
+         if(input.is_open()) return;
+
+         cout << "Sorry, I can't find the file " << filename << endl;
+         input.clear();
+     }
+ }
+
+string GetLine() {
+     string result;
+     getline(cin, result);
+     return result;
+}
+
+int GetInteger() {
+    int integer;
+    while(true) {
+        stringstream converter;
+        converter << GetLine();
+        
+        if(converter >> integer) {
+            char remaining;
+            if (converter >> remaining) {
+                cout << "Unexpected character:" << remaining << endl;
+            }
+            return integer;
+        } else {
+            cout << "Please enter an integer"  << endl;
+        }
+        cout << "Retry :" << endl;
+    }
+}

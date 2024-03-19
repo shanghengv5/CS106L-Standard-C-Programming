@@ -9,7 +9,7 @@
 #define chapter5_hpp
 
 #include <vector>
-#include "chapter1-3.hpp"
+#include "helper.hpp"
 const int kNumValues = 10;
 using namespace std;
 

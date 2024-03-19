@@ -124,5 +124,32 @@ preprocessor reports an error containing message how to use this file
 
 pass
 
+# chapter 
 
-
+1. List two differences between the vector's push_back and resize member functions.
+ push_back is add an element to tail of vector, resize can add or arase an element,it add element with fill default element
+2. What header files do you need to #include to use vector? deque?
+#include <vector> #include <deque>
+3. How do you tell how many elements are in a vector? In a deque?
+values.size()
+4. How do you remove the first element from a vector? From a deque?
+vec.erase(vec.begin() + 0);
+deque.pop_front();
+5. Write a function called LinesFromFile which takes in a string containing a filename and returns a vector<string> containing all of the lines of text in the file in the order in which they appear. If the file does not exist, you can return an empty vector. (Hint: look at the code for reading the world file in the Snake example and see if you can modify it appropriately)
+void LineFromFile() {
+    vector<string> vec;
+    ifstream input;
+    OpenUserFile(input);
+    string text;
+    while(getline(input, text)) {
+        vec.push_back(text);
+    }
+    input.close();
+    for(int i = 0; i < vec.size(); ++i) {
+        cout << vec[i] << endl;
+    }
+}
+6. Update the code for the sorting program so that it sorts elements in descending order instead ofascending order.
+Just change FindSmaller to findBiggest and insert
+7. One use for the deque container is to create a ring buffer. Unlike the linear vector and deque containers you saw in this chapter, a ring buffer is circular. Here's an illustration of a ring buffer:
+implement a ring constructor
