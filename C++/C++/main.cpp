@@ -11,30 +11,13 @@
 #include "units.h"
 #include "chapter5.hpp"
 #include "snake.hpp"
+#include "chapter6.hpp"
 using namespace std;
 
 
-bool IsPositive(int x) {
-    return x < 0;
-}
-
-void LineFromFile() {
-    vector<string> vec;
-    ifstream input;
-    OpenUserFile(input);
-    string text;
-    while(getline(input, text)) {
-        vec.push_back(text);
-    }
-    input.close();
-    for(int i = 0; i < vec.size(); ++i) {
-        cout << vec[i] << endl;
-    }
-}
-
 int main(int argc, const char * argv[]) {
 //    Play();
-    LineFromFile();
+//    LineFromFile();
     // insert code here...
 //    PrintWorldCaptial();
 //    TestGetLine();
@@ -59,6 +42,7 @@ int main(int argc, const char * argv[]) {
 //    cout << ColorToString(StringToColor("TT"))  << endl;
 //    cout << eColor_Green << endl;
 //    PrintVectors();
+    PrintSteps();
     return 0;
 }
 
