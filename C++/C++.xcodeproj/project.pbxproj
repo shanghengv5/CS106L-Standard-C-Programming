@@ -41,6 +41,7 @@
 		72BB55432BA93E8A00F5EAAA /* helper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = helper.hpp; sourceTree = "<group>"; };
 		72BB55452BAC12BC00F5EAAA /* chapter6.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chapter6.cpp; sourceTree = SOURCE_ROOT; };
 		72BB55462BAC12BC00F5EAAA /* chapter6.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chapter6.hpp; sourceTree = SOURCE_ROOT; };
+		72BB55482BAD8F0C00F5EAAA /* keywords.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = keywords.txt; sourceTree = SOURCE_ROOT; };
 		72BED2282B95D5110094B658 /* strutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = strutils.cpp; sourceTree = "<group>"; };
 		72BED2292B95D5110094B658 /* strutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = strutils.hpp; sourceTree = "<group>"; };
 		72BED22B2B96EB210094B658 /* chapter1-3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "chapter1-3.cpp"; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		72D7F1682B8C3FDB004AE81A /* C++ */ = {
 			isa = PBXGroup;
 			children = (
+				72BB55482BAD8F0C00F5EAAA /* keywords.txt */,
 				72BB55452BAC12BC00F5EAAA /* chapter6.cpp */,
 				72BB55462BAC12BC00F5EAAA /* chapter6.hpp */,
 				72BED22E2B9EE1EC0094B658 /* x-macro.cpp */,

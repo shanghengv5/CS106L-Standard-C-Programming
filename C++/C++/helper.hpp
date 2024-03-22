@@ -15,6 +15,10 @@
 using namespace std;
 
 void OpenUserFile(ifstream& input);
+string GetFileContents(ifstream& input);
 string GetLine();
 int GetInteger();
+void PreprocessString(string& text);
+    
+
 #endif /* helper_hpp */

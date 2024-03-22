@@ -15,11 +15,12 @@ void  PrintVectors() {
         values.insert(values.begin() + InsertionIndex(values, val), val);
     }
     
-
     for(size_t i = 0; i < kNumValues; ++i) {
         cout << values[i] << endl;
     }
 }
+
+
 
 size_t InsertionIndex(vector<int>& values, int val) {
     for(size_t i = 0; i < values.size(); ++i)

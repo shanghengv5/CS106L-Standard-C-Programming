@@ -11,9 +11,15 @@
 #include <vector>
 #include <iostream>
 #include <set>
+#include <map>
+#include "helper.hpp"
 
 using namespace std;
 int SixSidedDie();
 long RepeatNum();
 void PrintSteps();
+set<string> LoadKeywords();
+void PreprocessString(string& text);
+void PrintReserved();
+map<string, size_t> GenerateKeywordReport(string fileCotents);
 #endif /* chapter6_hpp */

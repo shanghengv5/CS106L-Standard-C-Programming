@@ -42,7 +42,8 @@ int main(int argc, const char * argv[]) {
 //    cout << ColorToString(StringToColor("TT"))  << endl;
 //    cout << eColor_Green << endl;
 //    PrintVectors();
-    PrintSteps();
+//    PrintSteps();
+    PrintReserved();
     return 0;
 }
 

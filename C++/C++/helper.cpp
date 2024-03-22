@@ -20,6 +20,25 @@ void OpenUserFile(ifstream& input) {
      }
  }
 
+string GetFileContents(ifstream& input) {
+    string result;
+    string line;
+    
+    while(getline(input, line)) {
+        result += line + "\n";
+    }
+//    cout << "Files: " << result;
+    return result;
+}
+
+void PreprocessString(string& text) {
+    for (size_t k = 0; k < text.size(); ++k) {
+        if(ispunct(text[k]) && text[k] != '_')  {
+            text[k] = ' ';
+        }
+    }
+}
+
 string GetLine() {
      string result;
      getline(cin, result);
