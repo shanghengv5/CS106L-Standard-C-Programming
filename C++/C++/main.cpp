@@ -42,8 +42,9 @@ int main(int argc, const char * argv[]) {
 //    cout << ColorToString(StringToColor("TT"))  << endl;
 //    cout << eColor_Green << endl;
 //    PrintVectors();
-//    PrintSteps();
-    PrintReserved();
+    PrintSteps();
+//    PrintReserved();
+//    cout << "Is email address: " << boolalpha << IsEmailAddress("123@qq.com") << endl;
     return 0;
 }
 

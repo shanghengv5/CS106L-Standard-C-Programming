@@ -124,7 +124,7 @@ preprocessor reports an error containing message how to use this file
 
 pass
 
-# chapter 
+# chapter 5
 
 1. List two differences between the vector's push_back and resize member functions.
  push_back is add an element to tail of vector, resize can add or arase an element,it add element with fill default element
@@ -153,3 +153,58 @@ void LineFromFile() {
 Just change FindSmaller to findBiggest and insert
 7. One use for the deque container is to create a ring buffer. Unlike the linear vector and deque containers you saw in this chapter, a ring buffer is circular. Here's an illustration of a ring buffer:
 implement a ring constructor
+
+# chapter 6
+
+1. How do you check whether an element is contained in an STL set?
+    set.find(element) != set.end() or set.count(element) == true
+2. What is the restriction on what types can be stored in an STL set? Do the vector or deque have this restriction?
+primitive type,and implement comparable,the  restriction of set is different
+3. How do you insert an element into a set? How do you remove an element from a set?
+set.insert(element)
+set.clear()
+set.erase(element)
+4. How many copies of a single element can exist in a set? How about a multiset?
+only one in set,mutiset can save infinite copy element
+5. How do you iterate over the contents of a set?
+for(set<int>::iterator itr = sets.begin(); itr != set.end; itr++)
+6. How do you check whether a key is contained in an STL map?
+same as set
+7. List two ways that you can insert key/value pairs into an STL map.
+maps[key] = value;
+maps.insert(make_pair(key, value));
+8. What happens if you look up the value associated with a nonexistent key in an STL map using square brackets? What if you use the find function?
+create a new key with value.use find function can check whether a key is contained in an STL map.
+9. Recall that when iterating over the contents of an STL multiset, the elements will be visited in sorted order. Using this property, rewrite the program from last chapter that reads a list of numbers from the user, then prints them in sorted order. Why is it necessary to use a multiset instead of a regular set?
+set only store unique element
+10. The union of two sets is the collection of elements contained in at least one of the sets. For example, the union of {1, 2, 3, 5, 8} and {2, 3, 5, 7, 11} is {1, 2, 3, 5, 7, 8, 11}. Write a function Union which takes in two set<int> and returns their union.
+iterate one set, and insert another
+11. The intersection of two sets is the collection of elements contained in both of the sets. For example, the intersection of {1, 2, 3, 5, 8} and {2, 3, 5, 7, 11} is {2, 3, 5}. Write a function Intersection that takes in two set<int>s and returns their intersection.
+use count(element) to find the intersection
+12. Earlier in this chapter, we wrote a program that rolled dice until the same number was rolled twice, then printed out the number of rolls made. Rewrite this program so that the same number must be rolled three times before the process terminates. How many times do you expect this process to take when rolling twenty-sided dice? (Hint: you will probably want to switch from using  a set to using a multiset. Also, remember the difference between the set's count function and the multiset's count function)
+9.9963
+13. As mentioned in this chapter, you can use a combination of lower_bound and upper_bound to iterate over elements in the closed interval [min, max]. What combination of these two functions could you use to iterate over the interval [min, max)? What about (min, max] and (min, max)?
+[min, max]
+lower = mySet.lower_bound(min);
+upper = mySet.upper_bound(max);
+for(itr = lower; lower != upper; ++lower)
+(min, max]
+lower = mySet.lower_bound(min);
+upper = mySet.upper_bound(max);
+lower = next(lower);
+upper = mySet.lower_bound(max);
+(min, max)  
+lower = mySet.lower_bound(min);
+upper = mySet.upper_bound(max);
+lower = next(lower);
+upper = prev(upper);
+14. Write a function NumberDuplicateEntries that accepts a map<string, string> and returns the number of duplicate values in the map (that is, the number of key/value pairs in the map with the same value).
+create a new map to count,the value is key and count is value;
+15. Write a function InvertMap that accepts as input a map<string, string> and returns a multimap<string, string> where each pair (key, value) in the source map is represented by (value, key) in the generated multimap. Why is it necessary to use a multimap here? How could you use the NumberDuplicateEntries function from the previous question to determine whether it is possible to invert the map into another map?
+Because the value can be duplicated,so use multimap.No, you can use NumberDuplicateEntries,It accept map<string, string> type;
+16. Suppose that we have two map<string, string>s called one and two. We can define the composition of one and two (denoted two ○ one) as follows: for any string r, if one[r] is s and two[s] is t, then (two ○ one)[r] = t. That is, looking up an element x in the composition of the maps is equivalent to looking up the value associated with x in one and then looking up its associated value in two. If one does not contain r as a key or if one[r] is not a key in two, then (two ○ one)[r] is undefined. Write a function ComposeMaps that takes in two map<string, string>s and returns a map<string, string> containing their composition.
+map<string, string> one;
+map<string, string> two;
+if one.count(r) || two.count(one[r]) return two[one[r]];
+17. (Challenge problem!) Write a function PrintMatchingPrefixes that accepts a set<string> and a string containing a prefix and prints out all of the entries of the set that begin with that prefix. Your function should only iterate over the entires it finally prints out. You can assume the prefix is nonempty, consists only of alphanumeric characters, and should treat prefixes case-sensitively. (Hint: In a set<string>, strings are sorted lexicographically, so all strings that start with “abc” will come before all strings that start with "abd")
+use DFA to solve
