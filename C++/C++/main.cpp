@@ -12,6 +12,7 @@
 #include "chapter5.hpp"
 #include "snake.hpp"
 #include "chapter6.hpp"
+#include "chapter7.hpp"
 using namespace std;
 
 
@@ -42,9 +43,10 @@ int main(int argc, const char * argv[]) {
 //    cout << ColorToString(StringToColor("TT"))  << endl;
 //    cout << eColor_Green << endl;
 //    PrintVectors();
-    PrintSteps();
+//    PrintSteps();
 //    PrintReserved();
 //    cout << "Is email address: " << boolalpha << IsEmailAddress("123@qq.com") << endl;
+    PrintAverage();
     return 0;
 }
 
