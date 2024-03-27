@@ -21,3 +21,27 @@ void PrintAverage() {
     
     cout << "Average is: " << total / values.size() << endl;
 }
+
+bool isNotAlpha(char ch) {
+    return !isalpha(ch);
+}
+
+bool isNotWordOrWhiteSpace(char ch) {
+    return isNotAlpha(ch) && !isspace(ch);
+}
+
+bool IsPalindrome(string input) {
+    input.erase(remove_if(input.begin(), input.end(), isNotAlpha), input.end());
+    transform(input.begin(), input.end(), input.begin(),  ::toupper);
+    return equal(input.begin(), input.begin() + input.size() / 2, input.rbegin());
+}
+
+bool IsWordPalindrome(string input) {
+    input.erase(remove_if(input.begin(), input.end(), isNotWordOrWhiteSpace), input.end());
+    transform(input.begin(), input.end(), input.begin(),  ::toupper);
+    
+    stringstream tokenizer(input);
+    vector<string> tokens;
+    tokens.insert(tokens.begin(), istream_iterator<string>(tokenizer), istream_iterator<string>());
+    return equal(tokens.begin(), tokens.begin() + tokens.size() / 2, tokens.rbegin());
+}

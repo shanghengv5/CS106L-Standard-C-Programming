@@ -46,7 +46,8 @@ int main(int argc, const char * argv[]) {
 //    PrintSteps();
 //    PrintReserved();
 //    cout << "Is email address: " << boolalpha << IsEmailAddress("123@qq.com") << endl;
-    PrintAverage();
+//    PrintAverage();
+//    cout <<  boolalpha <<  IsWordPalindrome("It is ita") << endl;
     return 0;
 }
 

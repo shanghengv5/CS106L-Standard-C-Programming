@@ -9,10 +9,15 @@
 #define chapter7_hpp
 
 #include <iostream>
+#include <sstream>
 #include <fstream>
 #include <set>
+#include <string>
 using namespace std;
 
 void PrintAverage();
-
+bool IsPalindrome(string input);
+bool IsWordPalindrome(string input);
+bool isNotAlpha(char ch);
+bool isNotWordOrWhiteSpace(char ch);
 #endif /* chapter7_hpp */
