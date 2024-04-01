@@ -15,6 +15,7 @@
 		72BED22A2B95D5110094B658 /* strutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BED2282B95D5110094B658 /* strutils.cpp */; };
 		72BED22D2B96EB210094B658 /* chapter1-3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BED22B2B96EB210094B658 /* chapter1-3.cpp */; };
 		72BED2302B9EE1EC0094B658 /* x-macro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72BED22E2B9EE1EC0094B658 /* x-macro.cpp */; };
+		72D6676D2BBAB38300DFA2CB /* chapter8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72D6676B2BBAB38300DFA2CB /* chapter8.cpp */; };
 		72D7F16A2B8C3FDB004AE81A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72D7F1692B8C3FDB004AE81A /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		72BED22F2B9EE1EC0094B658 /* x-macro.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "x-macro.hpp"; sourceTree = "<group>"; };
 		72BED2312B9EE2580094B658 /* color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
 		72BED2322BA054F20094B658 /* units.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = units.h; sourceTree = "<group>"; };
+		72D6676B2BBAB38300DFA2CB /* chapter8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chapter8.cpp; sourceTree = SOURCE_ROOT; };
+		72D6676C2BBAB38300DFA2CB /* chapter8.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chapter8.hpp; sourceTree = SOURCE_ROOT; };
 		72D7F1662B8C3FDB004AE81A /* C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D7F1692B8C3FDB004AE81A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +91,8 @@
 		72D7F1682B8C3FDB004AE81A /* C++ */ = {
 			isa = PBXGroup;
 			children = (
+				72D6676B2BBAB38300DFA2CB /* chapter8.cpp */,
+				72D6676C2BBAB38300DFA2CB /* chapter8.hpp */,
 				72BB554C2BB16FE900F5EAAA /* data.txt */,
 				72BB55492BB16F1400F5EAAA /* chapter7.cpp */,
 				72BB554A2BB16F1400F5EAAA /* chapter7.hpp */,
@@ -175,6 +180,7 @@
 			files = (
 				72D7F16A2B8C3FDB004AE81A /* main.cpp in Sources */,
 				72BED22A2B95D5110094B658 /* strutils.cpp in Sources */,
+				72D6676D2BBAB38300DFA2CB /* chapter8.cpp in Sources */,
 				72BB55472BAC12BC00F5EAAA /* chapter6.cpp in Sources */,
 				72BB55442BA93E8A00F5EAAA /* helper.cpp in Sources */,
 				72BB554B2BB16F1400F5EAAA /* chapter7.cpp in Sources */,

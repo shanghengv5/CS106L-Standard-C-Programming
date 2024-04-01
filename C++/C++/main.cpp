@@ -13,6 +13,7 @@
 #include "snake.hpp"
 #include "chapter6.hpp"
 #include "chapter7.hpp"
+#include "chapter8.hpp"
 using namespace std;
 
 
@@ -48,6 +49,11 @@ int main(int argc, const char * argv[]) {
 //    cout << "Is email address: " << boolalpha << IsEmailAddress("123@qq.com") << endl;
 //    PrintAverage();
 //    cout <<  boolalpha <<  IsWordPalindrome("It is ita") << endl;
+        FMRadio myRadio;
+     if (myRadio.presetExists(1))
+         cout << "Preset 1: " << myRadio.getPreset(1) << endl;
+     else
+         cout << "Preset 1 not programmed." << endl;
     return 0;
 }
 
